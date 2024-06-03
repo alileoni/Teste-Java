@@ -1,0 +1,157 @@
+//classe Financiamento
+public class Financiamento {
+        //Atributos
+        private double valorImovel;
+        private int prazoFinanciamento; //em anos
+        private double taxaJurosAnual;
+
+        //Construtor Financiamento
+        public Financiamento(double valorImovel, int prazoFinanciamento, double taxaJurosAnual){
+            this.valorImovel = valorImovel;
+            this.prazoFinanciamento = prazoFinanciamento;
+            this.taxaJurosAnual = taxaJurosAnual;
+        }
+        //Métodos
+        public double calcularPagamentoMensal() {
+            double pagamentoMensal = (valorImovel / (prazoFinanciamento * 12)) * (1+(taxaJurosAnual/12));
+            return pagamentoMensal;
+        }
+        public double calcularTotalPagamento() {
+            double totalPagamento = (pagamentoMensal * prazoFinanciamento * 12);
+            return totalPagamento;
+        }
+    }
+
+    //Classe Interface Usuario
+    public class InterfaceUsuario{
+        import java.util.Scanner;
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            double valorImovel = 0;
+            int prazoFinanciamento = 0;
+            double taxaJurosAnual = 0;
+
+            // Solicita o valor do imóvel ao usuário e valida se é válido
+            while (true) {
+                System.out.println("Informe o valor do imóvel:");
+                valorImovel = scanner.nextDouble();
+                if (valorImovel > 0) {
+                    System.out.printf("O valor inserido do imóvel foi R$ %d", valorImovel, ".");
+                    break;
+                } else {
+                    System.out.println("O valor inserido é inválido. Informe o valor do imóvel:");
+                }
+            }
+        }
+
+            // Solicita o prazo de financiamento ao usuário e valida se é válido
+            while (true){
+                System.out.println("Informe o prazo de financiamento (em anos):");
+                int prazoFinanciamento = scanner.nextInt();
+                if (prazoFinanciamento >0) {
+                    System.out.printf("O prazo de financiamento inserido foi %d", prazoFinanciamento, "anos.");
+                    break;
+                }
+                else {
+                    System.out.println("O valor inserido é inválido. Informe o prazo de financiamento (em anos):");
+
+                    //classe Financiamento
+                    class Financiamento {
+                        //Atributos
+                        private double valorImovel;
+                        private int prazoFinanciamento; //em anos
+                        private double taxaJurosAnual;
+
+                        //Construtor Financiamento
+                        public Financiamento(double valorImovel, int prazoFinanciamento, double taxaJurosAnual){
+                            this.valorImovel = valorImovel;
+                            this.prazoFinanciamento = prazoFinanciamento;
+                            this.taxaJurosAnual = taxaJurosAnual;
+                        }
+                        //Métodos
+                        public double calcularPagamentoMensal() {
+                            double pagamentoMensal = (valorImovel / (prazoFinanciamento * 12)) * (1+(taxaJurosAnual/12));
+                            return pagamentoMensal;
+                        }
+                        public double calcularTotalPagamento() {
+                            double totalPagamento = (pagamentoMensal * prazoFinanciamento * 12);
+                            return totalPagamento;
+                        }
+                    }
+
+                    //Classe Interface Usuario
+    import java.util.Scanner;
+                    public class InterfaceUsuario{
+                        public static void main(String[] args) {
+                            Scanner scanner = new Scanner(System.in);
+
+                            // Solicita o valor do imóvel ao usuário e valida se é válido
+                            while (true){
+                                System.out.println("Informe o valor do imóvel:");
+                                double valorImovel = scanner.nextDouble();
+                                if (valorImovel >0) {
+                                    System.out.printf("O valor inserido do imóvel foi R$ %d", valorImovel, ".");
+                                    break;
+                                }
+                                else {
+                                    System.out.println("O valor inserido é inválido. Informe o valor do imóvel:");
+                                }
+                            }
+
+                            // Solicita o prazo de financiamento ao usuário e valida se é válido
+                            while (true){
+                                System.out.println("Informe o prazo de financiamento (em anos):");
+                                int prazoFinanciamento = scanner.nextInt();
+                                if (prazoFinanciamento >0) {
+                                    System.out.printf("O prazo de financiamento inserido foi %d", prazoFinanciamento, "anos.");
+                                    break;
+                                }
+                                else {
+                                    System.out.println("O valor inserido é inválido. Informe o prazo de financiamento (em anos):");
+
+                                    // Solicita a taxa de juros ao usuário e valida se é válido
+                                    while (true) {
+                                        System.out.println("Informe a taxa de juros anual (%):");
+                                        double taxaJurosAnual = scanner.nextDouble();
+                                        if (taxaJurosAnual > 0) {
+                                            System.out.printf("A taxa de juros inserida foi %d", taxaJurosAnual, "% ao ano.");
+                                            break;
+                                        } else {
+                                            System.out.println("O valor inserido é inválido. Informe a taxa de juros anual (%):");
+                                        }
+
+                                    }
+                  
+
+                    while (true){
+                        System.out.println("Informe a taxa de juros anual (%):");
+                        double taxaJurosAnual = scanner.nextDouble();
+                        if (taxaJurosAnual>0) {
+                            System.out.printf("A taxa de juros inserida foi %d", taxaJurosAnual, "% ao ano.");
+                            break;
+                        }
+                        else {
+                            System.out.println("O valor inserido é inválido. Informe a taxa de juros anual (%):");
+                        }
+
+            }
+        }
+
+        }
+//Classe Main
+public class Main {
+    public static void main (String[] args) {
+                    // Cria um objeto da classe Financiamento
+                    Financiamento financiamento = new Financiamento(valorImovel, prazoFinanciamento, taxaJurosAnual);
+
+                    // Calcula o pagamento mensal e o total a pagar
+                    double pagamentoMensal = financiamento.calcularPagamentoMensal();
+                    double totalAPagar = financiamento.calcularTotalAPagar();
+
+                    // Exibe o resultado para o usuário
+                    System.out.println("O pagamento mensal será, em reais: " + pagamentoMensal);
+                    System.out.println("O total a pagar será, em reais: " + totalAPagar);
+
+                    scanner.close();
+}
